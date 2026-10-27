@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101522">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>VENOM | First Aid Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <script src="{{ url_for('static', filename='js/admin.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}" defer></script>
+</head>
+<body>
+<div class="app-container">
+
+    <aside class="sidebar" id="sidebar">
+        <a href="#dashboard" class="brand">
+            <div class="brand-logo">V</div>
+            <div>
+                <h2>VENOM</h2>
+                <p>First Aid System</p>
+            </div>
+        </a>
+
+        <div class="sidebar-heading" data-i18n="mainMenu">القائمة الرئيسية</div>
+
+        <nav class="navigation">
+            <a href="#dashboard" class="nav-link active" data-target="dashboard">
+                <span class="nav-icon">▦</span>
+                <span data-i18n="dashboard">لوحة التحكم</span>
+            </a>
+            <a href="#contacts" class="nav-link" data-target="contacts">
+                <span class="nav-icon">✚</span>
+                <span data-i18n="contacts">جهات الاتصال</span>
+            </a>
+            <a href="#clinics" class="nav-link" data-target="clinics">
+                <span class="nav-icon">⌖</span>
+                <span data-i18n="clinics">العيادات والمراكز</span>
+            </a>
+            <a href="#rules" class="nav-link" data-target="rules">
+                <span class="nav-icon">▤</span>
+                <span data-i18n="rules">قواعد الإسعافات</span>
+            </a>
+            <a href="#analytics" class="nav-link" data-target="analytics">
+                <span class="nav-icon">▥</span>
+                <span data-i18n="analytics">التقارير والتحليلات</span>
+            </a>
+            <a href="#data-management" class="nav-link" data-target="data-management">
+                <span class="nav-icon">⇧</span>
+                <span data-i18n="dataManagement">إدارة البيانات</span>
+                <small data-i18n="x_editData">تحرير البيانات</small>
+            </a>
+            <a href="#governorates" class="nav-link" data-target="governorates">
+                <span class="nav-icon">⌖</span>
+                <span data-i18n="x_navGov">المحافظات والمناطق</span>
+            </a>
+            <a href="#categories" class="nav-link" data-target="categories">
+                <span class="nav-icon">▤</span>
+                <span data-i18n="x_navCat">التصنيفات</span>
+            </a>
+            <a href="#import" class="nav-link" data-target="import">
+                <span class="nav-icon">⇧</span>
+                <span data-i18n="x_navImport">استيراد البيانات</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-status">
+            <span class="status-dot" id="statusDot"></span>
+            <div>
+                <strong data-i18n="systemStatus">حالة النظام</strong>
+                <p id="systemStatusText" aria-live="polite">جارٍ الاتصال...</p>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            First Aid Awareness Assistant
+            <br>
+            <span>Admin Panel · VENOM Team</span>
+            <br><br>
+            <a href="/admin/logout" style="color: var(--primary); text-decoration: none; font-weight: bold;"><span data-i18n="x_logout">تسجيل الخروج</span> 🚪</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <button type="button" class="menu-button" id="menuButton"
+                    aria-label="فتح القائمة" aria-expanded="false">☰</button>
+
+            <div class="page-heading">
+                <h1 id="pageTitle" data-i18n="dashboard">لوحة التحكم</h1>
+                <p data-i18n="subtitle">إدارة بيانات الطوارئ والإسعافات الأولية</p>
+            </div>
+
+            <div class="topbar-actions">
+                <form id="globalSearchForm" class="vd-search" role="search">
+                    <span>⌕</span><input type="search" id="globalSearch" placeholder="البحث في النظام..." data-i18n-placeholder="x_gsearch" aria-label="search">
+                </form>
+                <button type="button" class="icon-button vd-bell" id="bellButton" aria-label="notifications">🔔<b id="bellCount" hidden></b></button>
+                <div class="vd-user"><span class="vd-avatar">VA</span><span><strong data-i18n="x_admin">مدير النظام</strong><small>VENOM Admin</small></span></div>
+                <span class="admin-badge">ADMINISTRATOR</span>
+                <button type="button" class="icon-button" id="languageToggle"
+                        aria-label="تغيير اللغة">EN</button>
+                <button type="button" class="icon-button" id="themeToggle"
+                        aria-label="تغيير المظهر">☼</button>
+                <button type="button" class="primary-button" id="refreshButton">
+                    <span>↻</span>
+                    <span data-i18n="refresh">تحديث</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="api-banner" id="apiBanner" role="status" aria-live="polite">
+            <span class="status-dot"></span>
+            <span id="apiState">جارٍ تحميل بيانات النظام...</span>
+        </div>
+
+        <!-- لوحة التحكم الرئيسية -->
+        <section id="dashboard" class="content-panel page-section">
+            <div class="welcome-section">
+                <div>
+                    <span class="eyebrow">VENOM · ADMIN OVERVIEW</span>
+                    <h2 data-i18n="welcome">مرحبًا بك في لوحة الإدارة</h2>
+                    <p data-i18n="welcomeText">
+                        تابعي بيانات النظام وجهات الاتصال وقواعد الإسعافات الأولية من مكان واحد.
+                    </p>
+                </div>
+                <div class="welcome-icon">✚</div>
+            </div>
+
+            <div id="vd-root"></div>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-card-top">
+                        <span data-i18n="searches">عمليات البحث</span>
+                        <span class="stat-icon">⌕</span>
+                    </div>
+                    <h3 id="totalSearches">—</h3>
+                    <p data-i18n="searchesDescription">عمليات البحث المسجلة</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-card-top">
+                        <span data-i18n="contacts">جهات الاتصال</span>
+                        <span class="stat-icon">✚</span>
+                    </div>
+                    <h3 id="totalContacts">—</h3>
+                    <p data-i18n="contactsDescription">جهات الاتصال المتاحة</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-card-top">
+                        <span data-i18n="rules">قواعد الإسعافات</span>
+                        <span class="stat-icon">▤</span>
+                    </div>
+                    <h3 id="totalRules">—</h3>
+                    <p data-i18n="rulesDescription">القواعد المسجلة</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-card-top">
+                        <span data-i18n="connection">الاتصال بالـ API</span>
+                        <span class="stat-icon">◉</span>
+                    </div>
+                    <h3 id="connectionStatus" class="status-value">—</h3>
+                    <p data-i18n="connectionDescription">حالة الاتصال بالخادم</p>
+                </article>
+            </div>
+
+            <!-- قسم إضافة جهة / عيادة جديدة المضاف حديثاً -->
+            <div class="section-title" style="margin-top: 30px;">
+                <div>
+                    <h2 data-i18n="x_addClinicTitle">إضافة عيادة أو مركز جديد</h2>
+                    <p data-i18n="x_addClinicSub">أدخلي بيانات الجهة الجديدة لتضاف مباشرة إلى النظام</p>
+                </div>
+            </div>
+
+            <div style="background: var(--surface); padding: 20px; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 30px;">
+                <form action="/admin/clinics/add" method="POST" id="addClinicForm">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <div class="dialog-grid">
+                        <label><span data-i18n="x_clinicName">اسم العيادة / المركز</span>
+                            <input type="text" name="name" placeholder="مثلاً: مستشفى النور" data-i18n-placeholder="p_name" required>
+                        </label>
+                        <label><span data-i18n="x_buildingAddr">المبنى / العنوان</span>
+                            <input type="text" name="building" placeholder="العنوان أو المبنى" data-i18n-placeholder="p_bld">
+                        </label>
+                        <label><span data-i18n="x_floorDetails">الدور / تفاصيل الموقع</span>
+                            <input type="text" name="floor" placeholder="مثلاً: الدور الأرضي" data-i18n-placeholder="p_floor">
+                        </label>
+                        <label><span data-i18n="x_phoneNo">رقم الهاتف</span>
+                            <input type="text" name="phone" placeholder="رقم التواصل" data-i18n-placeholder="p_phone">
+                        </label>
+                        <label><span data-i18n="x_latOpt">خط العرض (اختياري)</span>
+                            <input type="number" step="any" min="-90" max="90" name="lat" placeholder="30.0444">
+                        </label>
+                        <label><span data-i18n="x_lonOpt">خط الطول (اختياري)</span>
+                            <input type="number" step="any" min="-180" max="180" name="lon" placeholder="31.2357">
+                        </label>
+                        <label><span data-i18n="x_hoursLbl">مواعيد العمل</span>
+                            <input type="text" name="hours" placeholder="مثلاً: 24 ساعة" data-i18n-placeholder="p_hours">
+                        </label>
+                    </div>
+                    <button type="submit" class="primary-button" style="margin-top:16px" data-i18n="x_saveAddClinic">+ حفظ وإضافة العيادة</button>
+                </form>
+            </div>
+
+            <div class="section-title">
+                <div>
+                    <h2 data-i18n="overview">نظرة عامة</h2>
+                    <p data-i18n="overviewText">ملخص سريع لأهم بيانات النظام</p>
+                </div>
+            </div>
+
+            <div class="overview-grid">
+                <article class="overview-card">
+                    <span class="overview-icon">✚</span>
+                    <h3 data-i18n="contacts">جهات الاتصال</h3>
+                    <p data-i18n="contactsOverview">عرض بيانات جهات الاتصال المسجلة.</p>
+                    <a href="#contacts" class="action-link" data-target="contacts"
+                       data-i18n="viewContacts">عرض جهات الاتصال ←</a>
+                </article>
+
+                <article class="overview-card">
+                    <span class="overview-icon">▤</span>
+                    <h3 data-i18n="rules">قواعد الإسعافات</h3>
+                    <p data-i18n="rulesOverview">استعراض قواعد الإسعافات المتاحة.</p>
+                    <a href="#rules" class="action-link" data-target="rules"
+                       data-i18n="viewRules">عرض القواعد ←</a>
+                </article>
+
+                <article class="overview-card">
+                    <span class="overview-icon">▥</span>
+                    <h3 data-i18n="analytics">التقارير والتحليلات</h3>
+                    <p data-i18n="analyticsOverview">متابعة عمليات البحث المسجلة.</p>
+                    <a href="#analytics" class="action-link" data-target="analytics"
+                       data-i18n="viewAnalytics">عرض التقارير ←</a>
+                </article>
+            </div>
+
+            <div class="section-title">
+                <div>
+                    <h2 data-i18n="recentSearches">أحدث عمليات البحث</h2>
+                    <p data-i18n="recentSearchesText">أحدث السجلات التي يوفرها API التحليلات</p>
+                </div>
+                <button type="button" class="secondary-button" id="reloadRecentSearches"
+                        data-i18n="reload">إعادة تحميل</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th data-i18n="query">الاستعلام</th>
+                        <th data-i18n="timestamp">التاريخ والوقت</th>
+                    </tr>
+                    </thead>
+                    <tbody id="recentSearchesBody">
+                    <tr><td colspan="2" data-i18n="loading">جارٍ تحميل البيانات...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="feedback-message" id="dashboardFeedback" aria-live="polite"></p>
+        </section>
+
+        <!-- جهات الاتصال -->
+        <section id="contacts" class="content-panel page-section" hidden>
+            <div class="section-title">
+                <div>
+                    <h2 data-i18n="contacts">جهات الاتصال</h2>
+                    <p data-i18n="contactsPageText">بيانات التواصل المتاحة داخل النظام</p>
+                </div>
+                <div class="section-actions">
+                    <button type="button" class="primary-button" id="addContactButton" data-i18n="x_addContactBtn">+ إضافة جهة اتصال</button>
+                    <button type="button" class="secondary-button" id="reloadContacts" data-i18n="reload">إعادة تحميل</button>
+                </div>
+            </div>
+
+            <div class="table-toolbar">
+                <input type="search" id="contactSearch"
+                       placeholder="ابحثي بالاسم أو الهاتف أو المنطقة..."
+                       data-i18n-placeholder="searchContacts"
+                       aria-label="البحث في جهات الاتصال">
+                <span class="result-count" id="contactsCount">—</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th data-i18n="name">الاسم</th>
+                        <th data-i18n="phone">رقم الهاتف</th>
+                        <th data-i18n="type">النوع</th>
+                        <th data-i18n="availability">ساعات التوفر</th>
+                        <th data-i18n="area">المنطقة</th>
+                        <th data-i18n="x_actions">الإجراءات</th>
+                    </tr>
+                    </thead>
+                    <tbody id="contactsTableBody">
+                    <tr><td colspan="6" data-i18n="loading">جارٍ تحميل البيانات...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="feedback-message" id="contactsFeedback" aria-live="polite"></p>
+        </section>
+
+        <!-- العيادات والمراكز -->
+        <section id="clinics" class="content-panel page-section" hidden>
+            <div class="section-title">
+                <div>
+                    <h2 data-i18n="clinics">العيادات والمراكز</h2>
+                    <p data-i18n="clinicsDescription">بيانات العيادات والمراكز الطبية</p>
+                </div>
+                <button type="button" class="secondary-button" id="reloadClinics" data-i18n="reload">إعادة تحميل</button>
+            </div>
+
+            <div class="table-toolbar">
+                <input type="search" id="clinicSearch"
+                       placeholder="ابحثي بالاسم أو العنوان..."
+                       data-i18n-placeholder="searchClinics"
+                       aria-label="البحث في العيادات والمراكز">
+                <span class="result-count" id="clinicsCount">—</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th data-i18n="identifier">المعرّف</th>
+                        <th data-i18n="name">الاسم</th>
+                        <th data-i18n="building">المبنى</th>
+                        <th data-i18n="floor">الدور</th>
+                        <th data-i18n="phone">رقم الهاتف</th>
+                        <th data-i18n="latitude">خط العرض</th>
+                        <th data-i18n="longitude">خط الطول</th>
+                        <th data-i18n="hours">مواعيد العمل</th>
+                        <th data-i18n="x_actions">الإجراءات</th>
+                    </tr>
+                    </thead>
+                    <tbody id="clinicsTableBody">
+                    <tr>
+                        <td colspan="9" data-i18n="loading">جارٍ تحميل البيانات...</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="feedback-message" id="clinicsFeedback" aria-live="polite"></p>
+        </section>
+
+        <!-- قواعد الإسعافات -->
+        <section id="rules" class="content-panel page-section" hidden>
+            <div class="section-title">
+                <div>
+                    <h2 data-i18n="rules">قواعد الإسعافات</h2>
+                    <p data-i18n="rulesPageText">استعراض القواعد الموجودة في النظام</p>
+                </div>
+                <div class="section-actions">
+                    <button type="button" class="primary-button" id="addRuleButton" data-i18n="x_addRuleBtn">+ إضافة قاعدة</button>
+                    <button type="button" class="secondary-button" id="reloadRules" data-i18n="reload">إعادة تحميل</button>
+                </div>
+            </div>
+
+            <div class="table-toolbar">
+                <input type="search" id="ruleSearch"
+                       placeholder="ابحثي في قواعد الإسعافات..."
+                       data-i18n-placeholder="searchRules"
+                       aria-label="البحث في قواعد الإسعافات">
+                <span class="result-count" id="rulesCount">—</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th data-i18n="identifier">المعرّف</th>
+                        <th data-i18n="rule">القاعدة</th>
+                        <th data-i18n="details">التفاصيل</th>
+                        <th data-i18n="x_actions">الإجراءات</th>
+                    </tr>
+                    </thead>
+                    <tbody id="rulesTableBody">
+                    <tr><td colspan="4" data-i18n="loading">جارٍ تحميل البيانات...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="notice" data-i18n="medicalNotice">
+                يجب مراجعة المعلومات الطبية بواسطة مختصين قبل الاعتماد عليها في حالات الطوارئ.
+            </p>
+            <p class="feedback-message" id="rulesFeedback" aria-live="polite"></p>
+        </section>
+
+        <!-- التقارير والتحليلات -->
+        <section id="analytics" class="content-panel page-section" hidden>
+            <div class="section-title">
+                <div>
+                    <h2 data-i18n="analytics">التقارير والتحليلات</h2>
+                    <p data-i18n="analyticsPageText">ملخص عمليات البحث المسجلة في النظام</p>
+                </div>
+                <button type="button" class="primary-button" id="refreshAnalytics">
+                    ↻ <span data-i18n="refresh">تحديث</span>
+                </button>
+            </div>
+
+            <div class="stats-grid analytics-stats">
+                <article class="stat-card">
+                    <p data-i18n="searches">عمليات البحث</p>
+                    <h3 id="analyticsTotalSearches">—</h3>
+                </article>
+                <article class="stat-card">
+                    <p data-i18n="uniqueQueries">الاستعلامات المختلفة</p>
+                    <h3 id="uniqueQueries">—</h3>
+                </article>
+                <article class="stat-card">
+                    <p data-i18n="recentRecords">السجلات المعروضة</p>
+                    <h3 id="analyticsRecords">—</h3>
+                </article>
+            </div>
+
+            <div class="section-title">
+                <div>
+                    <h2 data-i18n="searchLog">سجل عمليات البحث</h2>
+                    <p data-i18n="searchLogText">البيانات التي يرجعها الخادم</p>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th data-i18n="query">الاستعلام</th>
+                        <th data-i18n="timestamp">التاريخ والوقت</th>
+                    </tr>
+                    </thead>
+                    <tbody id="analyticsTableBody">
+                    <tr><td colspan="2" data-i18n="loading">جارٍ تحميل البيانات...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="feedback-message" id="analyticsFeedback" aria-live="polite"></p>
+        </section>
+
+        <!-- إدارة البيانات -->
+        <section id="data-management" class="content-panel page-section" hidden>
+            <div class="section-title">
+                <div>
+                    <h2 data-i18n="dataManagement">إدارة البيانات</h2>
+                    <p data-i18n="dataManagementText">معلومات عن مصادر البيانات المتصلة بالنظام</p>
+                </div>
+            </div>
+
+            <div class="overview-grid">
+                <article class="overview-card">
+                    <h3>Contacts API</h3>
+                    <p data-i18n="contactsDataInfo">مصدر بيانات جهات الاتصال.</p>
+                    <span class="data-source">/api/contacts</span>
+                </article>
+                <article class="overview-card">
+                    <h3>Rules API</h3>
+                    <p data-i18n="rulesDataInfo">مصدر قواعد الإسعافات الأولية.</p>
+                    <span class="data-source">/api/rules</span>
+                </article>
+                <article class="overview-card">
+                    <h3>Analytics API</h3>
+                    <p data-i18n="analyticsDataInfo">مصدر سجلات البحث والتحليلات.</p>
+                    <span class="data-source">/api/analytics</span>
+                </article>
+            </div>
+
+            <p class="notice" data-i18n="dataManagementNotice">
+                يمكنك تعديل البيانات من أقسام جهات الاتصال والعيادات وقواعد الإسعافات. احرصي على مراجعة البيانات قبل حفظها.
+            </p>
+        </section>
+
+        <section id="governorates" class="content-panel page-section" hidden><div id="vd-governorates"></div></section>
+
+        <section id="categories" class="content-panel page-section" hidden><div id="vd-categories"></div></section>
+
+        <section id="import" class="content-panel page-section" hidden><div id="vd-import"></div></section>
+
+        <!-- نوافذ تحرير البيانات: تفتح فقط داخل لوحة الأدمن بعد تسجيل الدخول -->
+        <dialog id="contactDialog" class="edit-dialog">
+            <form id="contactForm">
+                <div class="dialog-heading"><h2 id="contactDialogTitle">إضافة جهة اتصال</h2><button type="button" class="icon-button" data-close-dialog="contactDialog" aria-label="إغلاق">×</button></div>
+                <input type="hidden" name="record_id">
+                <div class="dialog-grid">
+                    <label><span data-i18n="x_nameLbl">الاسم</span><input name="name" required></label>
+                    <label><span data-i18n="x_phoneNo">رقم الهاتف</span><input name="phone" required></label>
+                    <label><span data-i18n="x_typeCat">النوع / التصنيف</span><input name="type" required></label>
+                    <label><span data-i18n="x_availLbl">ساعات التوفر</span><input name="available_hours" required></label>
+                    <label><span data-i18n="x_areaLbl">المنطقة</span><input name="campus_area" required></label>
+                </div>
+                <p id="contactDialogFeedback" class="feedback-message" aria-live="polite"></p>
+                <div class="dialog-actions"><button type="button" class="secondary-button" data-close-dialog="contactDialog" data-i18n="x_cancel">إلغاء</button><button type="submit" class="primary-button" data-i18n="x_save">حفظ</button></div>
+            </form>
+        </dialog>
+
+        <dialog id="clinicDialog" class="edit-dialog">
+            <form id="clinicForm">
+                <div class="dialog-heading"><h2 id="clinicDialogTitle">تعديل بيانات العيادة</h2><button type="button" class="icon-button" data-close-dialog="clinicDialog" aria-label="إغلاق">×</button></div>
+                <input type="hidden" name="id">
+                <div class="dialog-grid">
+                    <label><span data-i18n="x_clinicName">اسم العيادة / المركز</span><input name="name" required></label>
+                    <label><span data-i18n="x_buildingAddr">المبنى / العنوان</span><input name="building"></label>
+                    <label><span data-i18n="x_floorDetails">الدور / تفاصيل الموقع</span><input name="floor"></label>
+                    <label><span data-i18n="x_phoneNo">رقم الهاتف</span><input name="phone"></label>
+                    <label><span data-i18n="x_lat">خط العرض</span><input name="lat" type="number" step="any" min="-90" max="90"></label>
+                    <label><span data-i18n="x_lon">خط الطول</span><input name="lon" type="number" step="any" min="-180" max="180"></label>
+                    <label><span data-i18n="x_hoursLbl">مواعيد العمل</span><input name="hours"></label>
+                </div>
+                <p id="clinicDialogFeedback" class="feedback-message" aria-live="polite"></p>
+                <div class="dialog-actions"><button type="button" class="secondary-button" data-close-dialog="clinicDialog" data-i18n="x_cancel">إلغاء</button><button type="submit" class="primary-button" data-i18n="x_saveEdits">حفظ التعديلات</button></div>
+            </form>
+        </dialog>
+
+        <dialog id="ruleDialog" class="edit-dialog">
+            <form id="ruleForm">
+                <div class="dialog-heading"><h2 id="ruleDialogTitle">تعديل قاعدة إسعافات</h2><button type="button" class="icon-button" data-close-dialog="ruleDialog" aria-label="إغلاق">×</button></div>
+                <label id="ruleIdLabel"><span data-i18n="x_ruleId">معرّف القاعدة</span><input name="rule_id" required></label>
+                <div class="dialog-grid">
+                    <label><span data-i18n="x_condition">الحالة / الشرط</span><input name="condition" required></label>
+                    <label><span data-i18n="x_severity">درجة الخطورة</span><select name="severity"><option value="red" data-i18n="x_sevRed">أحمر — عاجل</option><option value="orange" data-i18n="x_sevOrange">برتقالي</option><option value="green" data-i18n="x_sevGreen">أخضر</option></select></label>
+                    <label class="dialog-wide"><span data-i18n="x_actionAdvice">الإجراء / النصيحة</span><textarea name="action" rows="4" required></textarea></label>
+                    <label class="dialog-wide"><span data-i18n="x_triggers">الكلمات الدالة (كل كلمة في سطر)</span><textarea name="symptom_triggers" rows="3"></textarea></label>
+                    <label class="dialog-wide"><span data-i18n="x_referral">التحويل / جهة الإحالة</span><textarea name="referral" rows="2"></textarea></label>
+                </div>
+                <p id="ruleDialogFeedback" class="feedback-message" aria-live="polite"></p>
+                <div class="dialog-actions"><button type="button" class="secondary-button" data-close-dialog="ruleDialog" data-i18n="x_cancel">إلغاء</button><button type="submit" class="primary-button" data-i18n="x_save">حفظ</button></div>
+            </form>
+        </dialog>
+
+        <dialog id="entityDialog" class="edit-dialog"><form id="entityForm"></form></dialog>
+
+        <footer class="main-footer">
+            <span>VENOM · First Aid Awareness Assistant</span>
+            <span data-i18n="footerText">لوحة إدارة داخلية</span>
+        </footer>
+    </main>
+</div>
+</body>
+</html>

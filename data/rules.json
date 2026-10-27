@@ -1,0 +1,2012 @@
+{
+  "system": "First Aid Knowledge Base - Emergency Triage Rules",
+  "version": "2.0",
+  "last_updated": "2026-10-25",
+  "maintained_by": "Member 4 (Data Architect) & Member 2 (Knowledge Base)",
+  "rules": [
+    {
+      "rule_id": "RULE_BURN_01",
+      "condition": "burn",
+      "symptom_triggers": [
+        "large_blisters",
+        "charred_skin",
+        "face_burn",
+        "chemical_burn",
+        "airway_involvement",
+        "white_skin",
+        "inhalation_burn",
+        "third_degree"
+      ],
+      "severity": "red",
+      "action": "تبريد بماء صنبور جاري 20 دقيقة، حظر الثلج ومعجون الأسنان، تغطية بشاش فازلين معقم، عدم نزع الملابس الملتصقة، والتوجه فوراً لطوارئ الحروق.",
+      "referral": "مركز حروق مستشفى كفر الشيخ العام أو مستشفى العبور للتأمين الصحي أو الإسعاف 123 فوراً"
+    },
+    {
+      "rule_id": "RULE_BURN_02",
+      "condition": "burn",
+      "symptom_triggers": [
+        "blisters",
+        "second_degree",
+        "severe_pain",
+        "hand_burn",
+        "foot_burn",
+        "joint_burn",
+        "hot_oil",
+        "scalds"
+      ],
+      "severity": "orange",
+      "action": "تبريد بماء بارد جاري 20 دقيقة، حظر فتح الفقاعات المائية، نزع الإكسسوارات برفق، تغطية بشاش معقم، ومراجعة قسم الحروق.",
+      "referral": "طوارئ الجراحة العامة أو عيادة الحروق بمستشفى كفر الشيخ العام"
+    },
+    {
+      "rule_id": "RULE_BURN_03",
+      "condition": "burn",
+      "symptom_triggers": [
+        "minor_burn",
+        "redness",
+        "sunburn",
+        "contact_burn",
+        "first_degree",
+        "mild_pain"
+      ],
+      "severity": "green",
+      "action": "تبريد تحت ماء صنبور بارد لمدة 15 دقيقة، دهان مرهم ملطف مثل ميبو، ومسكن خفيف عند الحاجة.",
+      "referral": "عناية منزلية أولية مع مراجعة عيادة الجامعة إذا زاد الاحمرار أو التورم"
+    },
+    {
+      "rule_id": "RULE_CHOKING_01",
+      "condition": "choking",
+      "symptom_triggers": [
+        "cannot_breathe",
+        "holding_throat",
+        "turning_blue",
+        "unable_to_speak",
+        "loss_of_consciousness",
+        "silent_choking",
+        "cyanosis"
+      ],
+      "severity": "red",
+      "action": "مناورة هيمليك فوراً: 5 ضربات بين لوحي الظهر يعقبها 5 ضغطات بطنية للداخل والأعلى، وبدء CPR فوراً إن فقد الوعي.",
+      "referral": "طلب الإسعاف 123 فوراً مع الاستمرار في الإسعافات دون توقف"
+    },
+    {
+      "rule_id": "RULE_CHOKING_02",
+      "condition": "choking",
+      "symptom_triggers": [
+        "partial_obstruction",
+        "persistent_cough",
+        "stridor",
+        "throat_pain",
+        "difficulty_swallowing",
+        "post_choking"
+      ],
+      "severity": "orange",
+      "action": "تشجيع السعال بقوة لطرد العائق، حظر الضرب على الظهر وهو معتدل، حظر إدخال الأصابع في الحلق، ومراقبة التنفس.",
+      "referral": "طوارئ الأنف والأذن والحنجرة بمستشفى كفر الشيخ الجامعي أو العام"
+    },
+    {
+      "rule_id": "RULE_CPR_01",
+      "condition": "cpr",
+      "symptom_triggers": [
+        "unconscious",
+        "not_breathing",
+        "no_pulse",
+        "collapsed",
+        "cardiac_arrest",
+        "agonal_breathing",
+        "sudden_collapse"
+      ],
+      "severity": "red",
+      "action": "بدء الضغطات الصدرية فوراً 100-120 ضغطة/دقيقة بعمق 5-6 سم، طلب جهاز AED، واستدعاء إسعاف 123.",
+      "referral": "الإسعاف 123 فوراً مع النقل لطوارئ القلب والعناية المركزة بمستشفى كفر الشيخ الجامعي"
+    },
+    {
+      "rule_id": "RULE_CUT_01",
+      "condition": "cut",
+      "symptom_triggers": [
+        "heavy_bleeding",
+        "spurting_blood",
+        "arterial_bleeding",
+        "deep_wound",
+        "persistent_bleeding",
+        "hypovolemic_shock",
+        "uncontrolled_bleeding"
+      ],
+      "severity": "red",
+      "action": "ضغط مباشر قوي ومستمر بشاش معقم، رفع الطرف فوق مستوى القلب، عدم إزالة الشاش المشبع، وتثبيت أي جسم غارز.",
+      "referral": "طوارئ جراحة الأوعية الدموية بمستشفى كفر الشيخ الجامعي أو الإسعاف 123 فوراً"
+    },
+    {
+      "rule_id": "RULE_CUT_02",
+      "condition": "cut",
+      "symptom_triggers": [
+        "gaping_wound",
+        "requires_stitches",
+        "rusty_nail",
+        "foreign_object_embedded",
+        "dirty_wound",
+        "tendon_pain",
+        "animal_bite_cut"
+      ],
+      "severity": "orange",
+      "action": "السيطرة على النزيف بضغط معقم، غسل الحواف بمحلول ملحي، تغطية الجرح، والتوجه للخياطة الجراحية ومصل التيتانوس.",
+      "referral": "طوارئ الجراحة بمستشفى كفر الشيخ العام أو مستشفى العبور للتأمين الصحي"
+    },
+    {
+      "rule_id": "RULE_CUT_03",
+      "condition": "cut",
+      "symptom_triggers": [
+        "minor_cut",
+        "scratch",
+        "small_wound",
+        "superficial_cut",
+        "bleeding_stopped",
+        "abrasion"
+      ],
+      "severity": "green",
+      "action": "غسل الجرح بالماء والصابون، تطهير بمطهر لطيف، وضع لاصق معقم، وتغييره بانتظام.",
+      "referral": "عناية منزلية أولية أو مراجعة عيادة الجامعة في حال حدوث صديد أو التهاب"
+    },
+    {
+      "rule_id": "RULE_POISONING_01",
+      "condition": "poisoning",
+      "symptom_triggers": [
+        "wheat_pill",
+        "corrosive",
+        "pesticide",
+        "bleach",
+        "organophosphate",
+        "unresponsive",
+        "convulsions_poison",
+        "acid_ingestion",
+        "cyanosis_poison"
+      ],
+      "severity": "red",
+      "action": "حظر إحداث القيء نهائياً. لحبة الغلة: حظر الماء واللبن وإعطاء زيت برافين، وغسل الجلد الملوث، والتوجه فوراً لمركز السموم.",
+      "referral": "مركز السموم بجامعة المنصورة (0502202685) أو مركز سموم مستشفى كفر الشيخ العام والإسعاف 123"
+    },
+    {
+      "rule_id": "RULE_POISONING_02",
+      "condition": "poisoning",
+      "symptom_triggers": [
+        "drug_overdose",
+        "accidental_ingestion",
+        "vomiting_poison",
+        "drowsiness_poison",
+        "chemical_inhalation",
+        "nausea_poison"
+      ],
+      "severity": "orange",
+      "action": "تحديد اسم الدواء والكمية ووقت الابتلاع، حظر الوصفات العشوائية، والتواصل الفوري مع مركز السموم.",
+      "referral": "مركز علاج التسمم بجامعة المنصورة أو طوارئ الباطنة بمستشفى كفر الشيخ العام"
+    },
+    {
+      "rule_id": "RULE_ANAPHYLAXIS_01",
+      "condition": "allergy_anaphylaxis",
+      "symptom_triggers": [
+        "swelling_throat",
+        "difficulty_breathing",
+        "lip_swelling",
+        "stridor_allergy",
+        "anaphylactic_shock",
+        "hypotension_allergy",
+        "collapse_allergy"
+      ],
+      "severity": "red",
+      "action": "حقن قلم الإبينفرين (EpiPen) في الفخذ خارجياً فوراً، الاستلقاء مع رفع الساقين، وحظر الوقوف نهائياً.",
+      "referral": "طوارئ الاستقبال العاجل - الإسعاف 123 فوراً للمراقبة المستمرة"
+    },
+    {
+      "rule_id": "RULE_ANAPHYLAXIS_02",
+      "condition": "allergy_anaphylaxis",
+      "symptom_triggers": [
+        "generalized_hives",
+        "facial_swelling",
+        "intense_itching",
+        "mild_wheezing",
+        "food_allergy_reaction",
+        "urticaria_spread"
+      ],
+      "severity": "orange",
+      "action": "إعطاء مضاد هيستامين، مراقبة التنفس، كمادات باردة للحكة، والتوجه لطوارئ المستشفى للتقييم.",
+      "referral": "طوارئ الباطنة بمستشفى كفر الشيخ العام أو مستشفى العبور للتأمين الصحي"
+    },
+    {
+      "rule_id": "RULE_ANAPHYLAXIS_03",
+      "condition": "allergy_anaphylaxis",
+      "symptom_triggers": [
+        "localized_itch",
+        "mild_rash",
+        "minor_hives",
+        "local_skin_redness",
+        "contact_dermatitis"
+      ],
+      "severity": "green",
+      "action": "غسل المنطقة بالماء والصابون، دهان لوشن كالامين أو كورتيزون موضعي، وتناول مضاد هيستامين.",
+      "referral": "عناية منزلية أولية مع استشارة عيادة الجامعة إذا استمر الطفح لأكثر من يومين"
+    },
+    {
+      "rule_id": "RULE_FAINTING_01",
+      "condition": "fainting",
+      "symptom_triggers": [
+        "unconscious_over_1min",
+        "irregular_pulse",
+        "incontinence",
+        "chest_pain_fainting",
+        "head_injury_fainting",
+        "seizure_after_faint"
+      ],
+      "severity": "red",
+      "action": "فحص التنفس وبدء CPR إن غاب، وضعه في وضع الإفاقة الجانبي إن كان يتنفس، وحظر سكب الماء أو الصفع.",
+      "referral": "الإسعاف 123 فوراً مع النقل لطوارئ المخ والأعصاب والقلب بمستشفى كفر الشيخ الجامعي"
+    },
+    {
+      "rule_id": "RULE_FAINTING_02",
+      "condition": "fainting",
+      "symptom_triggers": [
+        "loss_of_consciousness",
+        "pale_skin",
+        "cold_sweating",
+        "slow_recovery",
+        "fainting_after_fall",
+        "repeated_syncope"
+      ],
+      "severity": "orange",
+      "action": "رفع الساقين 30 سم لتنشيط الدورة الدموية، تفكيك الملابس الضيقة، تهوية المكان، ومراقبة الوعي.",
+      "referral": "عيادة الجامعة أو طوارئ الباطنة بمستشفى كفر الشيخ العام إذا تكررت النوبة"
+    },
+    {
+      "rule_id": "RULE_FAINTING_03",
+      "condition": "fainting",
+      "symptom_triggers": [
+        "dizziness",
+        "feeling_faint",
+        "lightheadedness",
+        "orthostatic_hypotension",
+        "heat_dizziness",
+        "rapid_recovery"
+      ],
+      "severity": "green",
+      "action": "الجلوس فوراً وخفض الرأس بين الركبتين، شرب سوائل باردة أو عصير، والراحة التامة.",
+      "referral": "رعاية ذاتية واستشارة طبيب عيادة الجامعة لقياس الضغط والسكر التراكمي"
+    },
+    {
+      "rule_id": "RULE_FRACTURE_01",
+      "condition": "fracture",
+      "symptom_triggers": [
+        "bone_visible",
+        "compound_fracture",
+        "severe_arterial_bleed",
+        "loss_of_pulse_limb",
+        "spinal_injury",
+        "pelvic_fracture",
+        "cold_blue_extremity"
+      ],
+      "severity": "red",
+      "action": "حظر تحريك المصاب باشتباه العمود الفقري، تغطية العظم البارز بشاش معقم رطب دون ضغط، وعدم رد العظم.",
+      "referral": "الإسعاف 123 فوراً وطوارئ جراحة العظام والعمود الفقري بمستشفى كفر الشيخ الجامعي"
+    },
+    {
+      "rule_id": "RULE_FRACTURE_02",
+      "condition": "fracture",
+      "symptom_triggers": [
+        "deformity",
+        "cannot_move_limb",
+        "severe_swelling",
+        "crepitus",
+        "suspected_dislocation",
+        "intense_bone_pain",
+        "cannot_bear_weight"
+      ],
+      "severity": "orange",
+      "action": "تثبيت الطرف بمجبّرة دون محاولة رد العظم، كمادات باردة غير مباشرة، تسكين الألم، ونقل المصاب للمستشفى.",
+      "referral": "طوارئ العظام بمستشفى العبور للتأمين الصحي أو مستشفى كفر الشيخ العام"
+    },
+    {
+      "rule_id": "RULE_FRACTURE_03",
+      "condition": "fracture",
+      "symptom_triggers": [
+        "minor_sprain",
+        "mild_swelling",
+        "wrist_strain",
+        "ankle_twist",
+        "able_to_move_joint",
+        "bruising"
+      ],
+      "severity": "green",
+      "action": "تطبيق بروتوكول RICE: راحة، كمادات باردة غير مباشرة، رباط ضاغط مرن، ورفع الطرف المصاب.",
+      "referral": "عناية منزلية أولية ومراجعة عيادة العظام بالجامعة إذا لم يخف الألم خلال 48 ساعة"
+    },
+    {
+      "rule_id": "RULE_ASTHMA_01",
+      "condition": "asthma",
+      "symptom_triggers": [
+        "silent_chest",
+        "cannot_speak_words",
+        "severe_cyanosis",
+        "exhaustion_breathing",
+        "inhaler_ineffective",
+        "respiratory_failure"
+      ],
+      "severity": "red",
+      "action": "إجلاس المصاب للأمام، إعطاء 10 بخات فنتولين عبر Spacer بمعدل بخة كل دقيقة، وتكرارها إذا تأخر الإسعاف 123.",
+      "referral": "طلب الإسعاف 123 فوراً والتحويل لطوارئ الصدر والعناية المركزة بمستشفى كفر الشيخ الجامعي"
+    },
+    {
+      "rule_id": "RULE_ASTHMA_02",
+      "condition": "asthma",
+      "symptom_triggers": [
+        "moderate_wheezing",
+        "chest_tightness",
+        "breathlessness",
+        "cough_attack",
+        "needs_inhaler_repeatedly",
+        "shortness_of_breath"
+      ],
+      "severity": "orange",
+      "action": "إبعاد المحفزات، إعطاء 4-6 بخات فنتولين، تهوية المكان، والتوجه لعمل جلسة استنشاق طبية.",
+      "referral": "طوارئ مستشفى الصدر بكفر الشيخ أو مستشفى كفر الشيخ العام"
+    },
+    {
+      "rule_id": "RULE_ASTHMA_03",
+      "condition": "asthma",
+      "symptom_triggers": [
+        "mild_wheezing",
+        "dry_cough_asthma",
+        "slight_chest_tightness",
+        "post_exercise_wheeze"
+      ],
+      "severity": "green",
+      "action": "الراحة التامة، أخذ بختين فنتولين، شرب سوائل دافئة، والمراقبة المنزلية.",
+      "referral": "متابعة منزلية ذاتية والرجوع للطبيب المعالج لتعديل الجرعة الوقائية"
+    },
+    {
+      "rule_id": "RULE_SEIZURES_01",
+      "condition": "seizures",
+      "symptom_triggers": [
+        "seizure_over_5min",
+        "status_epilepticus",
+        "second_seizure_no_recovery",
+        "seizure_in_water",
+        "pregnancy_seizure",
+        "unconscious_after_seizure"
+      ],
+      "severity": "red",
+      "action": "حظر تقييد المصاب، حظر وضع أي شيء بالفم نهائياً، حماية الرأس بوسادة، وضعه بوضع الإفاقة بعد التشنج، وطلب 123.",
+      "referral": "الإسعاف 123 فوراً وطوارئ المخ والأعصاب والعناية المركزة بمستشفى كفر الشيخ الجامعي"
+    },
+    {
+      "rule_id": "RULE_SEIZURES_02",
+      "condition": "seizures",
+      "symptom_triggers": [
+        "first_time_seizure",
+        "tonic_clonic",
+        "post_ictal_confusion",
+        "convulsions_stopped",
+        "diabetic_seizure",
+        "fever_convulsions"
+      ],
+      "severity": "orange",
+      "action": "تأمين المصاب، فك الملابس الضيقة، حظر الطعام والشراب وهو مشوش، وملازمته حتى يفيق تماماً.",
+      "referral": "طوارئ المخ والأعصاب بمستشفى كفر الشيخ العام أو مستشفى العبور للتأمين الصحي"
+    },
+    {
+      "rule_id": "RULE_BITES_01",
+      "condition": "bites_stings",
+      "symptom_triggers": [
+        "snake_bite",
+        "scorpion_sting",
+        "facial_droop",
+        "difficulty_swallowing_venom",
+        "spontaneous_bleeding",
+        "severe_neurotoxicity",
+        "viper_bite"
+      ],
+      "severity": "red",
+      "action": "سكون تام للمصاب، تثبيت الطرف الملدوغ تحت مستوى القلب، حظر ربط الشرايين وحظر جرح أو مص السم، والتوجه فوراً للمصل.",
+      "referral": "مركز السموم بجامعة المنصورة أو طوارئ مستشفى كفر الشيخ العام لتلقي مصل الثعابين والعقارب (Antivenom)"
+    },
+    {
+      "rule_id": "RULE_BITES_02",
+      "condition": "bites_stings",
+      "symptom_triggers": [
+        "dog_bite",
+        "cat_bite",
+        "rabies_risk",
+        "deep_puncture_bite",
+        "human_bite",
+        "infected_bite"
+      ],
+      "severity": "orange",
+      "action": "غسل الجرح فوراً بالماء والصابون لمدة 15 دقيقة، تطهير ببتادين، تغطية بشاش، والتوجه لتلقي مصل السعار والتيتانوس.",
+      "referral": "مركز مكافحة داء السعار بمستشفى كفر الشيخ العام أو مستشفى حميات كفر الشيخ"
+    },
+    {
+      "rule_id": "RULE_BITES_03",
+      "condition": "bites_stings",
+      "symptom_triggers": [
+        "insect_sting",
+        "bee_sting",
+        "mosquito_bite",
+        "local_itch",
+        "minor_swelling_sting"
+      ],
+      "severity": "green",
+      "action": "كشط الشوكة ببطاقة بلاستيكية، غسل بالماء والصابون، كمادة باردة، ودهان لوشن كالامين.",
+      "referral": "عناية منزلية مع المراقبة الفورية إذا ظهر تورم بالشفاه أو ضيق بالتنفس"
+    },
+    {
+      "rule_id": "RULE_ELECTRIC_01",
+      "condition": "electric_shock",
+      "symptom_triggers": [
+        "high_voltage",
+        "cardiac_arrest_electric",
+        "unconscious_electric",
+        "severe_entry_exit_burn",
+        "lightning_strike",
+        "apnea_electric"
+      ],
+      "severity": "red",
+      "action": "عزل مصدر التيار بأداة جافة غير موصلة، فحص التنفس والبدء بـ CPR فوراً واستخدام جهاز AED، وطلب 123.",
+      "referral": "الإسعاف 123 فوراً مع النقل لطوارئ العناية المركزة والقلب بمستشفى كفر الشيخ الجامعي"
+    },
+    {
+      "rule_id": "RULE_ELECTRIC_02",
+      "condition": "electric_shock",
+      "symptom_triggers": [
+        "low_voltage_shock",
+        "numbness_electric",
+        "muscle_spasm_electric",
+        "dizziness_electric",
+        "household_shock"
+      ],
+      "severity": "orange",
+      "action": "فصل الجهاز، إراحة المصاب، تبريد الحروق بماء جارٍ، ونقله لعمل تخطيط قلب كهربائي (ECG).",
+      "referral": "طوارئ الاستقبال والباطنة بمستشفى كفر الشيخ العام أو مستشفى العبور"
+    },
+    {
+      "rule_id": "RULE_EYE_01",
+      "condition": "eye_injury",
+      "symptom_triggers": [
+        "chemical_eye_splash",
+        "acid_in_eye",
+        "alkali_in_eye",
+        "penetrating_eye_injury",
+        "foreign_body_impaled",
+        "ruptured_globe",
+        "vision_loss"
+      ],
+      "severity": "red",
+      "action": "غسل العين بماء جاري 20 دقيقة للكيماويات، تغطية العين المصابة والأخرى بكوب واقٍ دون نزع الجسم، وحظر الفرك.",
+      "referral": "مستشفى الرمد بكفر الشيخ أو طوارئ جراحة العيون بمستشفى كفر الشيخ الجامعي والإسعاف 123"
+    },
+    {
+      "rule_id": "RULE_EYE_02",
+      "condition": "eye_injury",
+      "symptom_triggers": [
+        "blunt_eye_trauma",
+        "hyphema",
+        "black_eye_severe",
+        "double_vision",
+        "corneal_scratch",
+        "severe_eye_pain"
+      ],
+      "severity": "orange",
+      "action": "كمادة باردة حول محجر العين دون ضغط على المقلة، إبقاء الرأس مرفوعاً 45 درجة، وتجنب الأسبرين.",
+      "referral": "عيادة طوارئ الرمد بمستشفى الرمد بكفر الشيخ أو مستشفى كفر الشيخ العام"
+    },
+    {
+      "rule_id": "RULE_EYE_03",
+      "condition": "eye_injury",
+      "symptom_triggers": [
+        "minor_eye_irritation",
+        "dust_in_eye",
+        "eyelash_in_eye",
+        "superficial_redness_eye",
+        "tearing_eye"
+      ],
+      "severity": "green",
+      "action": "شطف العين بقطرة مرطبة أو محلول ملحي، الرمش في إناء ماء نظيف، وحظر فرك العين بالأصابع.",
+      "referral": "عناية منزلية واستشارة طبيب العيون إذا استمر الألم أو الشعور بوجود عائق لأكثر من ساعتين"
+    },
+    {
+      "rule_id": "RULE_HEATSTROKE_01",
+      "condition": "heatstroke",
+      "symptom_triggers": [
+        "temperature_over_40",
+        "dry_hot_skin",
+        "no_sweating",
+        "delirium_heat",
+        "unconscious_heat",
+        "heatstroke_crisis"
+      ],
+      "severity": "red",
+      "action": "تبريد سريع فوري بالماء والثلج تحت الإبطين والرقبة والتهوية بمروحة، حظر خافضات الحرارة، وطلب 123.",
+      "referral": "الإسعاف 123 فوراً مع النقل لطوارئ العناية المركزة بمستشفى كفر الشيخ الجامعي"
+    },
+    {
+      "rule_id": "RULE_HEATSTROKE_02",
+      "condition": "heatstroke",
+      "symptom_triggers": [
+        "heat_exhaustion",
+        "heavy_sweating_heat",
+        "muscle_cramps_heat",
+        "fever_heat",
+        "nausea_heat",
+        "weak_rapid_pulse"
+      ],
+      "severity": "orange",
+      "action": "نقل لمكان بارد، رفع الساقين، شرب محلول جفاف أو ماء بارد ببطء، والتوجه للمستشفى إن لم يتحسن خلال نصف ساعة.",
+      "referral": "طوارئ الباطنة بمستشفى كفر الشيخ العام أو المركز الطبي بالجامعة"
+    },
+    {
+      "rule_id": "RULE_HEATSTROKE_03",
+      "condition": "heatstroke",
+      "symptom_triggers": [
+        "heat_fatigue",
+        "mild_thirst",
+        "flushed_face",
+        "sweating_heat",
+        "tiredness_sun"
+      ],
+      "severity": "green",
+      "action": "الاستراحة في الظل، شرب ماء بارد أو عصائر، غسل الوجه بالماء البارد، والراحة التامة.",
+      "referral": "رعاية منزلية ذاتية"
+    },
+    {
+      "rule_id": "RULE_HYPO_01",
+      "condition": "low_blood_sugar",
+      "symptom_triggers": [
+        "unconscious_hypoglycemia",
+        "diabetic_coma",
+        "seizures_hypo",
+        "cannot_swallow_sugar",
+        "severe_hypoglycemia_crisis"
+      ],
+      "severity": "red",
+      "action": "حظر إعطاء أي سوائل أو أنسولين لفاقد الوعي، وضعه بوضع الإفاقة الجانبي، حقن جلوكاجون إن وجد، وطلب 123.",
+      "referral": "الإسعاف 123 فوراً وطوارئ الباطنة والسكر بمستشفى كفر الشيخ الجامعي أو العام"
+    },
+    {
+      "rule_id": "RULE_HYPO_02",
+      "condition": "low_blood_sugar",
+      "symptom_triggers": [
+        "severe_confusion_sugar",
+        "combative_behavior",
+        "slurred_speech_sugar",
+        "extreme_tremor",
+        "blood_sugar_below_54"
+      ],
+      "severity": "orange",
+      "action": "تطبيق قاعدة 15: إعطاء نصف كوب عصير محلى، إعادة القياس بعد 15 دقيقة، ثم إعطاء وجبة نشويات معقدة.",
+      "referral": "طوارئ الباطنة بمستشفى كفر الشيخ العام أو مستشفى العبور للتأمين الصحي"
+    },
+    {
+      "rule_id": "RULE_HYPO_03",
+      "condition": "low_blood_sugar",
+      "symptom_triggers": [
+        "mild_hypoglycemia",
+        "mild_shakiness",
+        "hunger_pangs",
+        "sweating_sugar",
+        "blood_sugar_60_70"
+      ],
+      "severity": "green",
+      "action": "تناول عصير محلى أو قطع حلوى، الراحة 15 دقيقة، وتناول وجبة خفيفة.",
+      "referral": "عناية ذاتية منزلية مع مراجعة جرعة الأنسولين أو الأقراص مع الطبيب المعالج"
+    },
+    {
+      "rule_id": "RULE_NOSEBLEED_01",
+      "condition": "nosebleed",
+      "symptom_triggers": [
+        "nosebleed_over_20min",
+        "posterior_bleed",
+        "heavy_blood_throat",
+        "dizziness_nosebleed",
+        "nosebleed_after_trauma",
+        "hypertensive_bleed"
+      ],
+      "severity": "orange",
+      "action": "ضغط مستمر على الأنف مع إمالة الرأس للأمام وبصق الدم، كمادة باردة، والتوجه فوراً لطوارئ الأنف والأذن.",
+      "referral": "طوارئ الأنف والأذن والحنجرة بمستشفى كفر الشيخ العام أو مستشفى كفر الشيخ الجامعي"
+    },
+    {
+      "rule_id": "RULE_NOSEBLEED_02",
+      "condition": "nosebleed",
+      "symptom_triggers": [
+        "minor_nosebleed",
+        "dry_weather_bleed",
+        "nosebleed_stopped",
+        "anterior_epistaxis",
+        "mild_bleed"
+      ],
+      "severity": "green",
+      "action": "الجلوس وإمالة الرأس للأمام، الضغط على الجزء الرخو 10-15 دقيقة متواصلة، وحظر التمخط لعدة ساعات.",
+      "referral": "إسعاف منزلي بسيط ومراقبة"
+    }
+  ],
+  "conditions": {
+    "burn": {
+      "red_flags": [
+        "large_blisters",
+        "charred_skin",
+        "face_burn",
+        "chemical_burn",
+        "airway_involvement",
+        "white_skin",
+        "inhalation_burn",
+        "third_degree"
+      ],
+      "rules": [
+        {
+          "id": "RULE_BURN_01",
+          "description": "حروق شديدة من الدرجة الثالثة أو كيميائية أو بالوجه تتطلب طوارئ فورية",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "burn"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "تبريد فوري بماء صنبور فاتر جارٍ (12-18 درجة مئوية) لمدة 20 دقيقة متواصلة",
+              "حظر استخدام الثلج أو معجون الأسنان أو الزبدة أو الوصفات الشعبية نهائياً",
+              "تغطية الحرق بضمادة شاش فازلين معقم غير لاصق أو غلاف بلاستيكي نظيف ومفرود",
+              "عدم نزع الملابس الملتصقة بالجلد المحترق وقص ما حولها فقط",
+              "تدفئة المصاب ببطانية نظيفة لمنع هبوط درجة حرارة الجسم المركزية (Hypothermia)"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: burn management / WHO & Delta ER Protocols",
+          "referral": "مركز حروق مستشفى كفر الشيخ العام أو مستشفى العبور للتأمين الصحي أو الإسعاف 123 فوراً"
+        },
+        {
+          "id": "RULE_BURN_02",
+          "description": "حروق الدرجة الثانية مع فقاعات مائية وألم شديد تتطلب رعاية طبية عاجلة",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "burn"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "تبريد الحرق بالماء البارد الجاري لمدة 20 دقيقة لتخفيف الألم ووقف تدمير الأنسجة",
+              "حظر ثقب أو فقع الفقاعات المائية نهائياً لأنها تمثل غطاءً بيولوجياً واقياً من التجرثم",
+              "نزع الخواتم والأساور برفق قبل حدوث التورم",
+              "وضع شاش فازلين معقم ونقل المصاب لتقييم الحرق واستبعاد التلوث"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: burn management / WHO & Delta ER Protocols",
+          "referral": "طوارئ الجراحة العامة أو عيادة الحروق بمستشفى كفر الشيخ العام"
+        },
+        {
+          "id": "RULE_BURN_03",
+          "description": "حروق سطحية بسيطة من الدرجة الأولى (احمرار خفيف)",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "burn"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "تبريد الحرق تحت ماء صنبور بارد لمدة 15-20 دقيقة",
+              "دهان مرهم حروق ملطف (مثل ميبو Mebo) بعد تجفيف الجلد بلطف",
+              "تناول مسكن بسيط (باراسيتامول) عند اللزوم، وتجنب التعرض للشمس"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: burn management / WHO & Delta ER Protocols",
+          "referral": "عناية منزلية أولية مع مراجعة عيادة الجامعة إذا زاد الاحمرار أو التورم"
+        }
+      ]
+    },
+    "choking": {
+      "red_flags": [
+        "cannot_breathe",
+        "holding_throat",
+        "turning_blue",
+        "unable_to_speak",
+        "loss_of_consciousness",
+        "silent_choking",
+        "cyanosis"
+      ],
+      "rules": [
+        {
+          "id": "RULE_CHOKING_01",
+          "description": "انسداد كامل لمجرى الهواء يهدد بالاختناق وتوقف التنفس",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "choking"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "تطبيق مناورة هيمليك فوراً: إمالة المصاب للأمام وتوجيه 5 ضربات حازمة بين لوحي الكتف بكعب اليد",
+              "إجراء 5 ضغطات بطنية سريعة للداخل والأعلى فوق السرة مباشرة",
+              "تكرار دورة 5 ضربات ظهرية و5 ضغطات بطنية حتى خروج الجسم الغريب",
+              "إذا فقد المصاب الوعي: وضعه على أرض مستوية والبدء بإنعاش القلب CPR فوراً"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: choking management / WHO & Delta ER Protocols",
+          "referral": "طلب الإسعاف 123 فوراً مع الاستمرار في الإسعافات دون توقف"
+        },
+        {
+          "id": "RULE_CHOKING_02",
+          "description": "انسداد جزئي لمجرى الهواء مع قدرة المصاب على السعال",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "choking"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "تشجيع المصاب بقوة على مواصلة السعال الذاتي لطرد العائق العالق",
+              "حظر ضرب المصاب على ظهره وهو واقف معتدل القامة حتى لا ينزلق الجسم للأسفل",
+              "حظر إدخال الأصابع بشكل أعمى (Blind Finger Sweep) في الفم تجنباً لدفع الجسم لعمق القصبة الهوائية",
+              "مراقبة التنفس باستمرار والجاهزية لمناورة هيمليك إذا تحول الانسداد لكامل"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: choking management / WHO & Delta ER Protocols",
+          "referral": "طوارئ الأنف والأذن والحنجرة بمستشفى كفر الشيخ الجامعي أو العام"
+        }
+      ]
+    },
+    "cpr": {
+      "red_flags": [
+        "unconscious",
+        "not_breathing",
+        "no_pulse",
+        "collapsed",
+        "cardiac_arrest",
+        "agonal_breathing",
+        "sudden_collapse"
+      ],
+      "rules": [
+        {
+          "id": "RULE_CPR_01",
+          "description": "توقف مفاجئ في عضلة القلب والتنفس يتطلب إنعاشاً رئوياً قلبياً فورياً",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "cpr"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "التأكد من أمان المكان ووضع المصاب مستلقياً على ظهره على سطح صلب مستوٍ",
+              "البدء فوراً بضغطات الصدر في منتصف عظمة القص بمعدل 100-120 ضغطة/دقيقة بعمق 5-6 سم",
+              "السماح بارتداد القفص الصدري كاملاً بعد كل ضغطة دون توقف لأكثر من 10 ثوانٍ",
+              "إعطاء نَفَسين إنقاذيين كل 30 ضغطة للمسعف المدرب (أو استمرار الضغط المستمر Hands-Only CPR لغير المدرب)",
+              "طلب جهاز الصدمات الكهربائية الآلي AED وتشغيله فور وصوله واتباع تعليماته الصوتية"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: cpr management / WHO & Delta ER Protocols",
+          "referral": "الإسعاف 123 فوراً مع النقل لطوارئ القلب والعناية المركزة بمستشفى كفر الشيخ الجامعي"
+        }
+      ]
+    },
+    "cut": {
+      "red_flags": [
+        "heavy_bleeding",
+        "spurting_blood",
+        "arterial_bleeding",
+        "deep_wound",
+        "persistent_bleeding",
+        "hypovolemic_shock",
+        "uncontrolled_bleeding"
+      ],
+      "rules": [
+        {
+          "id": "RULE_CUT_01",
+          "description": "نزيف شرياني حاد أو جروح عميقة نافذة تهدد بصدمة نزفية",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "cut"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "الضغط المباشر القوي المستمر بضمادة شاش معقم على موضع النزيف دون انقطاع لمدة 10 دقائق متصلة",
+              "رفع الطرف النازف فوق مستوى القلب للمساعدة في خفض ضغط الدم الموضعي",
+              "إذا تشبع الشاش بالدم، يُمنع رفعه نهائياً بل يوضع شاش إضافي فوقه مع استمرار الضغط القوي",
+              "حظر إزالة أي جسم غارز (سكين، زجاج) من الجرح، بل يُثبت بالشاش والرباط حوله",
+              "تدفئة المصاب ومراقبته لأي علامات هبوط أو شحوب أو فقدان وعي"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: cut management / WHO & Delta ER Protocols",
+          "referral": "طوارئ جراحة الأوعية الدموية بمستشفى كفر الشيخ الجامعي أو الإسعاف 123 فوراً"
+        },
+        {
+          "id": "RULE_CUT_02",
+          "description": "جروح غائرة أو متسخة بأجسام صدئة تحتاج خياطة طبية وتطعيم تيتانوس",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "cut"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "السيطرة على النزيف بالضغط المعتدل بشاش معقم",
+              "تنظيف حواف الجرح بلطف بمحلول ملحي معقم (Saline) دون فرك داخل الجرح",
+              "تغطية الجرح بضمادة نظيفة مع التوجه للمستشفى لعمل خياطة جراحية (خلال 6 ساعات من الإصابة)",
+              "التحقق من الحاجة لجرعة منشطة من مصل التيتانوس ومضاد حيوي وقائي"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: cut management / WHO & Delta ER Protocols",
+          "referral": "طوارئ الجراحة بمستشفى كفر الشيخ العام أو مستشفى العبور للتأمين الصحي"
+        },
+        {
+          "id": "RULE_CUT_03",
+          "description": "جروح وسحجات وخدوش سطحية طفيفة",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "cut"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "غسل موضع الجرح بالماء الجاري والصابون المعتدل لإزالة الغبار والجراثيم",
+              "تطهير المنطقة بمطهر بوفيدون يود أو محلول مطهر لطيف",
+              "وضع مرهم مضاد حيوي وتغطية الجرح بلاصق جروح معقم وتغييره يومياً"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: cut management / WHO & Delta ER Protocols",
+          "referral": "عناية منزلية أولية أو مراجعة عيادة الجامعة في حال حدوث صديد أو التهاب"
+        }
+      ]
+    },
+    "poisoning": {
+      "red_flags": [
+        "wheat_pill",
+        "corrosive",
+        "pesticide",
+        "bleach",
+        "organophosphate",
+        "unresponsive",
+        "convulsions_poison",
+        "acid_ingestion",
+        "cyanosis_poison"
+      ],
+      "rules": [
+        {
+          "id": "RULE_POISONING_01",
+          "description": "تسمم حاد بمواد شديدة السمية (حبة الغلة، مبيدات فوسفورية، مواد كاوية كالكلور ومية النار)",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "poisoning"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "حظر إحداث القيء مطلقاً حتى لا تتمزق القناة الهضمية والمريء من المواد الكاوية",
+              "في تسمم حبة الغلة: حظر إعطاء الماء أو اللبن مطلقاً (الماء ينشط إطلاق غاز الفوسفين القاتل)، وإعطاء زيت برافين أو زيت جوز هند طبي فوراً لتغليف المعدة",
+              "في التسمم الجلدي بالمبيدات: خلع الملابس الملوثة فوراً وغسل الجسم كاملاً بالماء والصابون 15 دقيقة",
+              "إحضار عبوة المادة السامة أو ما تبقى منها لتحديد الترياق المناسب في مركز السموم"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: poisoning management / WHO & Delta ER Protocols",
+          "referral": "مركز السموم بجامعة المنصورة (0502202685) أو مركز سموم مستشفى كفر الشيخ العام والإسعاف 123"
+        },
+        {
+          "id": "RULE_POISONING_02",
+          "description": "تسمم دوائي أو ابتلاع جرعات زائدة من أدوية مع وعي جزئي",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "poisoning"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "تحديد اسم الدواء وعدد الأقراص المبتلعة ووقت الحادثة بدقة",
+              "حظر إعطاء أي وصفات منزلية (كالبيض أو اللبن أو الفحم العادي) دون استشارة مركز السموم",
+              "إبقاء المريض في وضع الجلوس إذا كان واعياً، أو وضع الإفاقة إذا شعر بالنعاس الشديد",
+              "التواصل الفوري مع خط طوارئ السموم ونقله لأقرب استقبال مستشفى"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: poisoning management / WHO & Delta ER Protocols",
+          "referral": "مركز علاج التسمم بجامعة المنصورة أو طوارئ الباطنة بمستشفى كفر الشيخ العام"
+        }
+      ]
+    },
+    "allergy_anaphylaxis": {
+      "red_flags": [
+        "swelling_throat",
+        "difficulty_breathing",
+        "lip_swelling",
+        "stridor_allergy",
+        "anaphylactic_shock",
+        "hypotension_allergy",
+        "collapse_allergy"
+      ],
+      "rules": [
+        {
+          "id": "RULE_ANAPHYLAXIS_01",
+          "description": "صدمة تحسسية مفرطة تهدد بانسداد الحنجرة وهبوط الدورة الدموية",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "allergy_anaphylaxis"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "حقن قلم الإبينفرين (EpiPen) فوراً في منتصف الفخذ من الخارج عمودياً والضغط 5-10 ثوانٍ",
+              "استدعاء الإسعاف 123 فوراً دون أي إبطاء",
+              "إبقاء المصاب مستلقياً على ظهره مع رفع الساقين 30 سم لتثبيت ضغط الدم (أو الجلوس إذا كان يعاني من صعوبة بالغة في التنفس)",
+              "حظر إجبار المريض على الوقوف أو المشي لتفادي الانهيار الوعائي المفاجئ",
+              "إعطاء جرعة ثانية من قلم الإبينفرين بعد 5-15 دقيقة إذا لم تتحسن الأعراض"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: allergy_anaphylaxis management / WHO & Delta ER Protocols",
+          "referral": "طوارئ الاستقبال العاجل - الإسعاف 123 فوراً للمراقبة المستمرة"
+        },
+        {
+          "id": "RULE_ANAPHYLAXIS_02",
+          "description": "حساسية متوسطة مع انتشار الشرى الجلدي (الأرتيكاريا) وتورم خفيف بالوجه",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "allergy_anaphylaxis"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "إعطاء مضاد للهيستامين (مثل سيتريزين أو لوراتادين) عن طريق الفم سريعاً",
+              "مراقبة مجرى الهواء والتنفس بدقة لاحتمال تفاقم الحساسية إلى صدمة مفرطة",
+              "تطبيق كمادات ماء بارد على المناطق المصابة بالحكة لتهدئة تهيج الجلد",
+              "التوجه الفوري لأقرب طوارئ لتقييم الحاجة لحقن كورتيزون ومراقبة سريرية"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: allergy_anaphylaxis management / WHO & Delta ER Protocols",
+          "referral": "طوارئ الباطنة بمستشفى كفر الشيخ العام أو مستشفى العبور للتأمين الصحي"
+        },
+        {
+          "id": "RULE_ANAPHYLAXIS_03",
+          "description": "حساسية موضعية طفيفة أو طفح جلدي موضعي محدود",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "allergy_anaphylaxis"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "غسل المنطقة بالماء والصابون اللطيف لإزالة المادة المسببة للتحسس",
+              "وضع لوشن كالامين أو مرهم هيدروكورتيزون موضعي خفيف لتهدئة الحكة",
+              "تجنب حك الجلد لمنع حدوث التهاب بكتيري ثانوي، وتناول مضاد هيستامين عند اللزوم"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: allergy_anaphylaxis management / WHO & Delta ER Protocols",
+          "referral": "عناية منزلية أولية مع استشارة عيادة الجامعة إذا استمر الطفح لأكثر من يومين"
+        }
+      ]
+    },
+    "fainting": {
+      "red_flags": [
+        "unconscious_over_1min",
+        "irregular_pulse",
+        "incontinence",
+        "chest_pain_fainting",
+        "head_injury_fainting",
+        "seizure_after_faint"
+      ],
+      "rules": [
+        {
+          "id": "RULE_FAINTING_01",
+          "description": "إغماء طويل الأمد أكثر من دقيقة أو مصحوب باضطراب نبض أو سلس بولي",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "fainting"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "التحقق من مجرى الهواء والنبض والتنفس؛ إذا توقف التنفس يُبدأ الإنعاش القلبي CPR فوراً",
+              "وضع المصاب في وضع الإفاقة الجانبي إذا كان يتنفس للمحافظة على مجرى الهواء مفتوحاً ومنع ارتداد اللسان أو القيء",
+              "حظر سكب الماء على الوجه أو صفع المصاب أو محاولة إيقافه عنوة",
+              "فحص الرأس للتأكد من عدم وجود كدمات أو نزيف ناتج عن السقوط"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: fainting management / WHO & Delta ER Protocols",
+          "referral": "الإسعاف 123 فوراً مع النقل لطوارئ المخ والأعصاب والقلب بمستشفى كفر الشيخ الجامعي"
+        },
+        {
+          "id": "RULE_FAINTING_02",
+          "description": "فقدان وعي عابر أو هبوط مفاجئ مع استعادة الوعي ببطء",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "fainting"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "تمديد المصاب على ظهره مستوياً على الأرض ورفع ساقيه 30 سم لتنشيط تدفق الدم للمخ",
+              "تفكيك الملابس الضيقة وفتح أزرار القميص وتهوية الغرفة جيداً",
+              "حظر تقديم أي طعام أو شراب للمريض حتى يستعيد وعيه وإدراكه التام",
+              "إبقاء المصاب مستلقياً لمدة 10-15 دقيقة بعد الإفاقة ثم إجلاسه ببطء قبل الوقوف"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: fainting management / WHO & Delta ER Protocols",
+          "referral": "عيادة الجامعة أو طوارئ الباطنة بمستشفى كفر الشيخ العام إذا تكررت النوبة"
+        },
+        {
+          "id": "RULE_FAINTING_03",
+          "description": "شعور بالدوخة وزغللة وهبوط طفيف دون فقدان كامل للوعي",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "fainting"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "الجلوس فوراً مع خفض الرأس بين الركبتين أو الاستلقاء أرضاً",
+              "شرب كوب من الماء البارد أو عصير طبيعي طازج ببطء",
+              "الراحة في مكان بارد ومظلل وتجنب الوقوف المفاجئ"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: fainting management / WHO & Delta ER Protocols",
+          "referral": "رعاية ذاتية واستشارة طبيب عيادة الجامعة لقياس الضغط والسكر التراكمي"
+        }
+      ]
+    },
+    "fracture": {
+      "red_flags": [
+        "bone_visible",
+        "compound_fracture",
+        "severe_arterial_bleed",
+        "loss_of_pulse_limb",
+        "spinal_injury",
+        "pelvic_fracture",
+        "cold_blue_extremity"
+      ],
+      "rules": [
+        {
+          "id": "RULE_FRACTURE_01",
+          "description": "كسور مضاعفة مع بروز العظام خارج الجلد أو اشتباه كسر بالعمود الفقري",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "fracture"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "حظر تحريك المصاب نهائياً في إصابات الرقبة والظهر والعمود الفقري إلا لإنقاذ حياته من خطر داهم",
+              "تغطية العظم البارز بشاش معقم رطب دون أي ضغط عليه وحظر محاولة إعادة العظم لمكانه",
+              "الضغط بحذر حول الجرح لوقف النزيف الشديد دون الضغط على العظم المكسور",
+              "تدفئة المصاب ومراقبة النبض في الأطراف حتى وصول طواقم الإسعاف المتخصصة"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: fracture management / WHO & Delta ER Protocols",
+          "referral": "الإسعاف 123 فوراً وطوارئ جراحة العظام والعمود الفقري بمستشفى كفر الشيخ الجامعي"
+        },
+        {
+          "id": "RULE_FRACTURE_02",
+          "description": "اشتباه كسر مغلق مع تشوه موضعي ملحوظ وتورم شديد وعجز عن الحركة",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "fracture"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "تثبيت الطرف المصاب بمجبّرة أو دعامة صلبة (كرتون مقوى أو خشب مبطن) تشمل المفصلين أعلى وأسفل الكسر",
+              "حظر محاولة تعديل أو تقويم العظم المشوه نهائياً لتجنب تمزيق الأوعية الدموية والأعصاب",
+              "وضع كمادات باردة غير مباشرة (ثلج ملفوف بقماش) لمدة 15 دقيقة لتقليل التورم والنزف الداخلي",
+              "حظر السماح للمصاب بالمشي أو تحميل أي وزن على الساق المصابة ونقله بواسطة نقالة"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: fracture management / WHO & Delta ER Protocols",
+          "referral": "طوارئ العظام بمستشفى العبور للتأمين الصحي أو مستشفى كفر الشيخ العام"
+        },
+        {
+          "id": "RULE_FRACTURE_03",
+          "description": "التواء مفاصل أو إجهاد عضلي أو كدمات طفيفة دون تشوه في العظام",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "fracture"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "تطبيق قاعدة RICE الطبية: إراحة المفصل المصاب (Rest)",
+              "وضع كمادات ثلج غير مباشرة 15-20 دقيقة كل ساعتين (Ice)",
+              "لف المفصل برباط ضاغط مرن معتدل لدعم الأربطة (Compression)",
+              "رفع الطرف المصاب أعلى من مستوى القلب لتقليل التورم (Elevation)"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: fracture management / WHO & Delta ER Protocols",
+          "referral": "عناية منزلية أولية ومراجعة عيادة العظام بالجامعة إذا لم يخف الألم خلال 48 ساعة"
+        }
+      ]
+    },
+    "asthma": {
+      "red_flags": [
+        "silent_chest",
+        "cannot_speak_words",
+        "severe_cyanosis",
+        "exhaustion_breathing",
+        "inhaler_ineffective",
+        "respiratory_failure"
+      ],
+      "rules": [
+        {
+          "id": "RULE_ASTHMA_01",
+          "description": "أزمة ربو حادة تهدد بفشل تنفسي ونقص حاد في الأكسجين",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "asthma"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "إجلاس المصاب منتصباً في وضع مريح يميل للأمام قليلاً (حظر الاستلقاء على الظهر تماماً)",
+              "إعطاء 10 بخات من بخاخ الفنتولين (Salbutamol) عبر أنبوبة التباعد (Spacer) بمعدل بخة كل 30-60 ثانية",
+              "تكرار الجرعة (10 بخات أخرى) كل 10-15 دقيقة إذا تأخر وصول سيارة الإسعاف",
+              "إعطاء أكسجين رطب إن وُجد وطمأنة المصاب ومساعدته على التنفس المنتظم"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: asthma management / WHO & Delta ER Protocols",
+          "referral": "طلب الإسعاف 123 فوراً والتحويل لطوارئ الصدر والعناية المركزة بمستشفى كفر الشيخ الجامعي"
+        },
+        {
+          "id": "RULE_ASTHMA_02",
+          "description": "نوبة ربو متوسطة مع تزييق بالصدر وصعوبة في إكمال الجمل",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "asthma"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "إبعاد المصاب عن أي محفزات (أتربة، دخان، روائح نفاذة) وضمان تهوية جيدة",
+              "مساعدته على أخذ 4-6 بخات من الفنتولين مع أخذ 4 أنفاس هادئة بعد كل بخة",
+              "فك الملابس الضيقة حول الرقبة والصدر للمساعدة في تمدد الرئتين",
+              "التوجه للمستشفى لعمل جلسة استنشاق بمحلول فنتولين وموسعات شعب موسعة"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: asthma management / WHO & Delta ER Protocols",
+          "referral": "طوارئ مستشفى الصدر بكفر الشيخ أو مستشفى كفر الشيخ العام"
+        },
+        {
+          "id": "RULE_ASTHMA_03",
+          "description": "ضيق تنفس خفيف أو سعال تحسسي بعد مجهود بدني",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "asthma"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "التوقف فوراً عن ممارسة أي مجهود أو نشاط بدني والجلوس بارتياح",
+              "أخذ بختين من البخاخ الإسعافي الموسع للشعب الهوائية",
+              "شرب سوائل دافئة والاسترخاء حتى عودة التنفس إلى وتيرته الطبيعية"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: asthma management / WHO & Delta ER Protocols",
+          "referral": "متابعة منزلية ذاتية والرجوع للطبيب المعالج لتعديل الجرعة الوقائية"
+        }
+      ]
+    },
+    "seizures": {
+      "red_flags": [
+        "seizure_over_5min",
+        "status_epilepticus",
+        "second_seizure_no_recovery",
+        "seizure_in_water",
+        "pregnancy_seizure",
+        "unconscious_after_seizure"
+      ],
+      "rules": [
+        {
+          "id": "RULE_SEIZURES_01",
+          "description": "حالة صرع مستمرة أكثر من 5 دقائق أو نوبات متتالية دون استعادة الوعي",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "seizures"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "حظر محاولة تثبيت المصاب أو تقييد حركات تشنجه بالقوة نهائياً لمنع كسور العظام",
+              "حظر وضع أي أدوات أو أصابع أو ملاعق داخل فم المصاب مطلقاً (المصاب لن يبتلع لسانه ووضع الأجسام يكسر أسنانه ويسد مجرى الهواء)",
+              "حماية رأس المصاب بوسادة أو ملابس مطوية وإبعاد أي زجاج أو أثاث حاد محيط به",
+              "حساب مدة النوبة، وبمجرد توقف التشنجات يُقلب برفق على جنبه في وضع الإفاقة لضمان بقاء مجرى الهواء سالكاً"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: seizures management / WHO & Delta ER Protocols",
+          "referral": "الإسعاف 123 فوراً وطوارئ المخ والأعصاب والعناية المركزة بمستشفى كفر الشيخ الجامعي"
+        },
+        {
+          "id": "RULE_SEIZURES_02",
+          "description": "نوبة تشنج أولى أو نوبة صرع اعتيادية توقفت خلال دقائق مع تشوش بعد النوبة",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "seizures"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "ملازمة المصاب طوال فترة التشوش الذهني بعد النوبة (Post-ictal Phase) والتحدث معه بهدوء وطمأنته",
+              "تفكيك الملابس والأربطة الضيقة حول الرقبة لمساعدته على التنفس بعمق",
+              "حظر تقديم أي مأكولات أو مشروبات حتى يستعيد المصاب تركيزه وتوازنه الكاملين",
+              "فحص الجسم للتأكد من عدم تعرضه لإصابات أو كدمات أثناء السقوط والتشنج"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: seizures management / WHO & Delta ER Protocols",
+          "referral": "طوارئ المخ والأعصاب بمستشفى كفر الشيخ العام أو مستشفى العبور للتأمين الصحي"
+        }
+      ]
+    },
+    "bites_stings": {
+      "red_flags": [
+        "snake_bite",
+        "scorpion_sting",
+        "facial_droop",
+        "difficulty_swallowing_venom",
+        "spontaneous_bleeding",
+        "severe_neurotoxicity",
+        "viper_bite"
+      ],
+      "rules": [
+        {
+          "id": "RULE_BITES_01",
+          "description": "لدغة ثعبان سام أو عقرب مع أعراض سمية عصبية أو نزفية سريعة",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "bites_stings"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "إلزام المصاب بالهدوء والسكون التام؛ لأن الحركة تسرع امتصاص السم وانتشاره عبر الدورة الدموية",
+              "تثبيت الطرف الملدوغ بمجبّرة وإبقاؤه في مستوى منخفض وموازٍ للقلب",
+              "نزع الخواتم والأساور والأحذية الضيقة فوراً قبل أن يتضخم الطرف",
+              "حظر ربط شريان قاطع (Tourniquet)، وحظر جرح موضع اللدغة بالمشرط، وحظر مص السم بالفم أو استخدام الثلج نهائياً",
+              "نقل المصاب بسرعة فائقة إلى أقرب مركز مجهز بمصل السموم المتعدد"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: bites_stings management / WHO & Delta ER Protocols",
+          "referral": "مركز السموم بجامعة المنصورة أو طوارئ مستشفى كفر الشيخ العام لتلقي مصل الثعابين والعقارب (Antivenom)"
+        },
+        {
+          "id": "RULE_BITES_02",
+          "description": "عضة حيوان (كلب، قطة، قارض) مع احتمالية نقل داء الكلب (السعار)",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "bites_stings"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "غسل الجرح فوراً بالماء الجاري والصابون لمدة 15 دقيقة متصلة لإزالة لعاب الحيوان وتخفيف الفيروس",
+              "تطهير موضع العضة بصبغة بوفيدون يود (بتادين) وتغطيته بشاش معقم رخو",
+              "عدم خياطة الجرح فورياً في الطوارئ إلا للضرورة القصوى لتفادي حبس فيروس السعار",
+              "التوجه فوراً خلال 24 ساعة لبدء جرعات لقاح السعار (Rabies Post-Exposure) ومصل التيتانوس"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: bites_stings management / WHO & Delta ER Protocols",
+          "referral": "مركز مكافحة داء السعار بمستشفى كفر الشيخ العام أو مستشفى حميات كفر الشيخ"
+        },
+        {
+          "id": "RULE_BITES_03",
+          "description": "قرصة حشرة بسيطة أو لسعة نحلة موضعية دون أعراض تحسس عامة",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "bites_stings"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "إزالة شوكة النحلة بكشطها ببطاقة بلاستيكية مسطحة برفق دون الضغط على كيس السم",
+              "غسل المكان بالماء والصابون ووضع كمادة ثلج ملفوفة بقماش لمدة 10 دقائق لتخفيف التورم",
+              "وضع دهان كالامين أو كريم مضاد للهيستامين لتهدئة الحكة"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: bites_stings management / WHO & Delta ER Protocols",
+          "referral": "عناية منزلية مع المراقبة الفورية إذا ظهر تورم بالشفاه أو ضيق بالتنفس"
+        }
+      ]
+    },
+    "electric_shock": {
+      "red_flags": [
+        "high_voltage",
+        "cardiac_arrest_electric",
+        "unconscious_electric",
+        "severe_entry_exit_burn",
+        "lightning_strike",
+        "apnea_electric"
+      ],
+      "rules": [
+        {
+          "id": "RULE_ELECTRIC_01",
+          "description": "صعق كهربائي بجهد عالي أو صاعقة برق مع فقدان وعي أو توقف عضلة القلب",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "electric_shock"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "حظر لمس المصاب باليد المجردة ما دامت الدائرة الكهربائية متصلة لتجنب صعق المسعف",
+              "فصل مصدر الكهرباء الرئيسي فوراً أو إبعاد السلك بأداة خشبية أو بلاستيكية جافة تماماً",
+              "بمجرد عزل المصاب: فحص النبض والتنفس والبدء بإنعاش القلب CPR فوراً واستخدام جهاز AED",
+              "تغطية جروح دخول وخروج التيار بضمادات معقمة جافة والتعامل مع احتمال وجود كسور ناتجة عن القذف"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: electric_shock management / WHO & Delta ER Protocols",
+          "referral": "الإسعاف 123 فوراً مع النقل لطوارئ العناية المركزة والقلب بمستشفى كفر الشيخ الجامعي"
+        },
+        {
+          "id": "RULE_ELECTRIC_02",
+          "description": "صعق كهربائي منزلي منخفض الجهد مع دوخة أو حروق سطحية محدودة",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "electric_shock"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "فصل الجهاز المتسبب في الصعق وتهدئة المصاب وإبقاؤه مستلقياً في راحة تامة",
+              "تبريد الحروق السطحية بماء جارٍ نظيف وتغطيتها بشاش معقم",
+              "نقل المصاب للمستشفى لإجراء رسم قلب كهربائي (ECG) لاحتمال حدوث اضطراب متأخر في نظم القلب",
+              "مراقبة الدورة الدموية لأي خفقان أو ألم بالصدر أو تنميل بالأطراف"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: electric_shock management / WHO & Delta ER Protocols",
+          "referral": "طوارئ الاستقبال والباطنة بمستشفى كفر الشيخ العام أو مستشفى العبور"
+        }
+      ]
+    },
+    "eye_injury": {
+      "red_flags": [
+        "chemical_eye_splash",
+        "acid_in_eye",
+        "alkali_in_eye",
+        "penetrating_eye_injury",
+        "foreign_body_impaled",
+        "ruptured_globe",
+        "vision_loss"
+      ],
+      "rules": [
+        {
+          "id": "RULE_EYE_01",
+          "description": "دخول مادة كيميائية حارقة بالعين أو إصابة نافذة بجسم غارز في المقلة",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "eye_injury"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "في الكيماويات: غسل العين فوراً بماء صنبور جارٍ أو محلول ملحي لمدة 20 دقيقة متواصلة مع فتح الجفنين بالأصابع وتدفق الماء من الزاوية الداخلية للخارج",
+              "في الأجسام الغارزة: حظر نزع الجسم من العين نهائياً وحظر الضغط عليها؛ تغطية العين بكوب ورقي مثبت بلاصق وتغطية العين الأخرى لمنع حركتهما المتزامنة",
+              "حظر فرك العين باليد نهائياً وحظر وضع أي قطرات مجهولة"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: eye_injury management / WHO & Delta ER Protocols",
+          "referral": "مستشفى الرمد بكفر الشيخ أو طوارئ جراحة العيون بمستشفى كفر الشيخ الجامعي والإسعاف 123"
+        },
+        {
+          "id": "RULE_EYE_02",
+          "description": "كدمة بالعين مع تجمع دموي بالخزانة الأمامية (Hyphema) أو ازدواج في الرؤية",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "eye_injury"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "وضع كمادة باردة غير مباشرة حول عظام محجر العين دون الضغط المباشر على مقلة العين",
+              "إبقاء رأس المصاب مرفوعاً بزاوية 45 درجة لتقليل النزف والضغط داخل العين",
+              "حظر تناول الأسبرين أو مضادات التجلط لأنها تضاعف النزيف داخل العين",
+              "التوجه الفوري لطبيب العيون لفحص قاع العين واستبعاد انفصال الشبكية"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: eye_injury management / WHO & Delta ER Protocols",
+          "referral": "عيادة طوارئ الرمد بمستشفى الرمد بكفر الشيخ أو مستشفى كفر الشيخ العام"
+        },
+        {
+          "id": "RULE_EYE_03",
+          "description": "دخول أتربة أو ذرة غبار أو رمش بالعين مع احمرار بسيط وتدميع",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "eye_injury"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "غسل العين بلطف بقطرة مرطبة (دموع صناعية) أو محلول ملحي معقم",
+              "سحب الجفن العلوي فوق الجفن السفلي والرمش عدة مرات في إناء ماء نظيف لطرد الذرة",
+              "حظر فرك العين بالأصابع نهائياً لتفادي حدوث خدش في القرنية (Corneal Abrasion)"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: eye_injury management / WHO & Delta ER Protocols",
+          "referral": "عناية منزلية واستشارة طبيب العيون إذا استمر الألم أو الشعور بوجود عائق لأكثر من ساعتين"
+        }
+      ]
+    },
+    "heatstroke": {
+      "red_flags": [
+        "temperature_over_40",
+        "dry_hot_skin",
+        "no_sweating",
+        "delirium_heat",
+        "unconscious_heat",
+        "heatstroke_crisis"
+      ],
+      "rules": [
+        {
+          "id": "RULE_HEATSTROKE_01",
+          "description": "ضربة شمس خطيرة مع ارتفاع حرارة الجسم فوق 40 مئوية وتوقف العرق واضطراب الوعي",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "heatstroke"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "التبريد المكثف الفوري: نقل المصاب فوراً إلى مكان مكيف أو مظلل ونزع الملابس الخارجية",
+              "غمر الجسم بالماء البارد أو وضع كمادات ثلج تحت الإبطين والرقبة وبين الفخذين مع رش الماء واستخدام مروحة هوائية قوية",
+              "حظر إعطاء أي خافض للحرارة (أسبرين أو باراسيتامول) لأنها لا تنفع في الإجهاد البيئي وتجهد الكبد والكلى",
+              "حظر تقديم سوائل بالفم لمصاب مشوش أو فاقد للوعي لمنع دخول السوائل إلى الرئة"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: heatstroke management / WHO & Delta ER Protocols",
+          "referral": "الإسعاف 123 فوراً مع النقل لطوارئ العناية المركزة بمستشفى كفر الشيخ الجامعي"
+        },
+        {
+          "id": "RULE_HEATSTROKE_02",
+          "description": "إجهاد حراري مع عرق غزير وتقلصات عضلية ودوخة وهبوط ضغط",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "heatstroke"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "نقل المصاب لمكان بارد مظلل وتمديده مع رفع الساقين 30 سم",
+              "إعطاؤه رشفات بطيئة من ماء بارد أو محلول معالجة الجفاف لتعويض الأملاح المفقودة",
+              "رش رذاذ ماء بارد على الجلد والتهوية لخفض الحرارة تدريجياً",
+              "إذا استمر التقيؤ أو لم يهدأ النبض خلال 30 دقيقة، يجب نقله للمستشفى لتعليق محاليل وريدية"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: heatstroke management / WHO & Delta ER Protocols",
+          "referral": "طوارئ الباطنة بمستشفى كفر الشيخ العام أو المركز الطبي بالجامعة"
+        },
+        {
+          "id": "RULE_HEATSTROKE_03",
+          "description": "إرهاق حراري خفيف وعطش وشعور بالسخونة بعد التعرض للشمس",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "heatstroke"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "الاستراحة في الظل أو في غرفة جيدة التهوية والتوقف عن النشاط الحركي",
+              "شرب كوبين من الماء البارد أو العصائر الطبيعية المهدئة",
+              "غسل الوجه والذراعين بالماء البارد والاسترخاء التام"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: heatstroke management / WHO & Delta ER Protocols",
+          "referral": "رعاية منزلية ذاتية"
+        }
+      ]
+    },
+    "low_blood_sugar": {
+      "red_flags": [
+        "unconscious_hypoglycemia",
+        "diabetic_coma",
+        "seizures_hypo",
+        "cannot_swallow_sugar",
+        "severe_hypoglycemia_crisis"
+      ],
+      "rules": [
+        {
+          "id": "RULE_HYPO_01",
+          "description": "غيبوبة سكر هبوطية حادة مع فقدان وعي أو تشنجات وعجز عن البلع",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "low_blood_sugar"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "حظر إعطاء أي عصير أو ماء أو حلوى أو أنسولين نهائياً لفاقد الوعي (خطر الاختناق وانسداد مجرى الهواء)",
+              "وضع المريض في وضع الإفاقة الجانبي لضمان بقاء مجرى التنفس مفتوحاً",
+              "حقن إبرة جلوكاجون (Glucagon) في العضل إذا توفرت والمسعف مدرب عليها",
+              "استدعاء الإسعاف 123 فوراً لإعطاء محاليل جلوكوز مركزة وريدياً في سيارة الإسعاف أو الطوارئ"
+            ]
+          },
+          "priority": 10,
+          "source": "Guide: low_blood_sugar management / WHO & Delta ER Protocols",
+          "referral": "الإسعاف 123 فوراً وطوارئ الباطنة والسكر بمستشفى كفر الشيخ الجامعي أو العام"
+        },
+        {
+          "id": "RULE_HYPO_02",
+          "description": "هبوط سكر حاد مع تشوش ذهني شديد ورعشة وقدرة على البلع (سكر أقل من 54 مجم)",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "low_blood_sugar"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "تطبيق قاعدة 15 الطبية فوراً: إعطاء 15-20 جم من السكريات البسيطة سريعة الامتصاص (نصف كوب عصير محلى أو 3 ملاعق سكر مذابة في نصف كوب ماء)",
+              "الانتظار 15 دقيقة ثم إعادة قياس سكر الدم بجهاز القياس المنزلي",
+              "إذا ظل السكر أقل من 70 مجم/ديسيلتر، تُكرر جرعة السكر لمرة ثانية",
+              "بعد استقرار السكر فوق 70 مجم، يجب إطعام المصاب وجبة خفيفة معقدة (خبز، جبن) لمنع انتكاس السكر مجدداً"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: low_blood_sugar management / WHO & Delta ER Protocols",
+          "referral": "طوارئ الباطنة بمستشفى كفر الشيخ العام أو مستشفى العبور للتأمين الصحي"
+        },
+        {
+          "id": "RULE_HYPO_03",
+          "description": "هبوط سكر طفيف مع جوع مفاجئ ورعشة يدين خفيفة وسكر بين 60-70 مجم",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "low_blood_sugar"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "تناول نصف كوب عصير فواكه أو 3 قطع حلوى سريعة",
+              "الراحة لمدة 15 دقيقة والتحقق من قياس السكر",
+              "تناول وجبة الطعام المعتادة في موعدها وعدم تفويت أي وجبة"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: low_blood_sugar management / WHO & Delta ER Protocols",
+          "referral": "عناية ذاتية منزلية مع مراجعة جرعة الأنسولين أو الأقراص مع الطبيب المعالج"
+        }
+      ]
+    },
+    "nosebleed": {
+      "red_flags": [
+        "nosebleed_over_20min",
+        "posterior_bleed",
+        "heavy_blood_throat",
+        "dizziness_nosebleed",
+        "nosebleed_after_trauma",
+        "hypertensive_bleed"
+      ],
+      "rules": [
+        {
+          "id": "RULE_NOSEBLEED_01",
+          "description": "رعاف شديد مستمر لأكثر من 20 دقيقة أو نزيف خلفي متدفق بالحلق أو ناتج عن حادث",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "nosebleed"
+              },
+              {
+                "fact": "severity",
+                "equals": "orange"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "orange",
+            "actions": [
+              "مواصلة الضغط الثابت على الجزء اللحمي الرخو من الأنف بإصبعي الإبهام والسبابة",
+              "إمالة الرأس قليلاً للأمام (حظر إمالة الرأس للخلف لتجنب ابتلاع الدم وحدوث تقيؤ)",
+              "بصق الدم المتجمع في الحلق دون بلعه، ووضع كمادة ثلج ملفوفة بقماش فوق جسر الأنف والجبهة",
+              "التوجه فوراً لطوارئ الأنف والأذن لعمل حشو أنفي أو كي الأوعية النازفة وفحص ضغط الدم"
+            ]
+          },
+          "priority": 5,
+          "source": "Guide: nosebleed management / WHO & Delta ER Protocols",
+          "referral": "طوارئ الأنف والأذن والحنجرة بمستشفى كفر الشيخ العام أو مستشفى كفر الشيخ الجامعي"
+        },
+        {
+          "id": "RULE_NOSEBLEED_02",
+          "description": "رعاف أمامي بسيط عابر ناتج عن جفاف أو حرارة الجو",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "nosebleed"
+              },
+              {
+                "fact": "severity",
+                "equals": "green"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "green",
+            "actions": [
+              "الجلوس معتدلاً وإمالة الرأس قليلاً للأمام والتنفس بهدوء عبر الفم",
+              "الضغط بقوة وثبات على جانبي الجزء الرخو أسفل عظمة الأنف لمدة 10-15 دقيقة متصلة دون فك الإصبع للتحقق",
+              "وضع كمادة ماء بارد على الجبهة وأعلى الأنف للمساعدة في انقباض الشعيرات الدموية",
+              "حظر تنظيف الأنف (التمخط) أو حكها باليد لعدة ساعات بعد توقف الرعاف لتفادي تجدد النزيف"
+            ]
+          },
+          "priority": 1,
+          "source": "Guide: nosebleed management / WHO & Delta ER Protocols",
+          "referral": "إسعاف منزلي بسيط ومراقبة"
+        }
+      ]
+    },
+    "bleeding": {
+      "red_flags": [
+        "heavy_bleeding",
+        "uncontrolled_bleeding",
+        "spurting_blood"
+      ],
+      "rules": [
+        {
+          "id": "RULE_BLEEDING_ALIAS_01",
+          "description": "نزيف حاد يتطلب تدخلاً جراحياً فورياً",
+          "conditions": {
+            "AND": [
+              {
+                "fact": "condition",
+                "equals": "bleeding"
+              },
+              {
+                "fact": "severity",
+                "equals": "red"
+              }
+            ]
+          },
+          "conclusion": {
+            "severity": "red",
+            "actions": [
+              "الضغط المباشر القوي والمستمر بشاش معقم",
+              "رفع الطرف فوق مستوى القلب وتدفئة المصاب",
+              "طلب الإسعاف 123 فوراً"
+            ]
+          },
+          "priority": 10,
+          "source": "Emergency first aid guidance",
+          "referral": "طوارئ جراحة الأوعية الدموية بمستشفى كفر الشيخ الجامعي أو الإسعاف 123"
+        }
+      ]
+    }
+  }
+}
